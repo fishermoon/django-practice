@@ -6,3 +6,9 @@ from .models import Post
 def index(request):
     posts = Post.objects.all()
     return render(request, 'blog/index.html', {'posts': posts})
+
+def login(request):
+    return render(request, 'blog/login.html')
+
+def signup(request):
+    return render(request, 'blog/signup.html')
